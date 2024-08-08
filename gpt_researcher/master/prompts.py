@@ -84,6 +84,7 @@ Please follow all of the following guidelines in your report:
 
 Please do your best, this is very important to my career.
 Assume that the current date is {date.today()}.
+最后，请使用中文翻译并输出报告主要内容。
 """
 
 
@@ -146,6 +147,7 @@ def generate_outline_report_prompt(
         " for the research report, including the main sections, subsections, and key points to be covered."
         f" The research report should be detailed, informative, in-depth, and a minimum of {total_words} words."
         " Use appropriate Markdown syntax to format the outline and ensure readability."
+        "最后，请使用中文翻译并输出报告主要内容。"
     )
 
 
@@ -299,6 +301,7 @@ Assume the current date is {datetime.now(timezone.utc).strftime('%B %d, %Y')} if
 - You MUST mention the difference between the existing content and the new content in the report if you are adding the similar or same subsections wherever necessary.
 - The report should have a minimum length of {total_words} words.
 - Use an {tone.value} tone throughout the report.
+- 最后，请使用中文翻译并输出报告主要内容。
 """
 
 
@@ -333,6 +336,7 @@ Provide the draft headers in a list format using markdown syntax, for example:
 - The focus MUST be on the main topic! You MUST Leave out any information un-related to it!
 - Must NOT have any introduction, conclusion, summary or reference section.
 - Focus solely on creating headers, not content.
+- 最后，请使用中文翻译并输出报告主要内容。
 """
 
 def generate_report_introduction(question: str, research_summary: str = "") -> str:
@@ -343,6 +347,7 @@ Using the above latest information, Prepare a detailed report introduction on th
 - The introduction should be preceded by an H1 heading with a suitable topic for the entire report.
 - You must include hyperlinks with markdown syntax ([url website](url)) related to the sentences wherever necessary.
 Assume that the current date is {datetime.now(timezone.utc).strftime('%B %d, %Y')} if required.
+- 最后，请使用中文翻译并输出报告主要内容。
 """
 
 
